@@ -1,6 +1,6 @@
+
 // pages/Dashboard.js - Main inventory view
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { 
   Container, Row, Col, Card, Table, Form, 
   Button, Badge, Spinner, InputGroup, 
@@ -345,7 +345,6 @@ function Dashboard() {
   );
 }
 
-// Helper function to get color for element badges
 function getElementColor(element) {
   const colors = {
     'Air': 'info',
@@ -361,26 +360,6 @@ function getElementColor(element) {
   };
   
   return colors[element] || 'secondary';
-}
-
-export default Dashboard;
-import React, { useState } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import { useSkylanderContext } from '../context/SkylanderContext';
-
-function Dashboard() {
-  const { skylanders, userInventory } = useSkylanderContext();
-  
-  return (
-    <Container>
-      <h2 className="mb-4">Dashboard</h2>
-      <Row>
-        <Col>
-          <p>Welcome to your Skylander Inventory Dashboard</p>
-        </Col>
-      </Row>
-    </Container>
-  );
 }
 
 export default Dashboard;
