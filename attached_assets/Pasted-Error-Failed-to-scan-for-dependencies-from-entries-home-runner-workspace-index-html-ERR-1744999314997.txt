@@ -1,0 +1,110 @@
+Error:   Failed to scan for dependencies from entries:
+  /home/runner/workspace/index.html
+
+  ✘ [ERROR] The symbol "React" has already been declared
+
+    src/pages/Dashboard.js:367:7:
+      367 │ import React, { useState } from 'react';
+          ╵        ~~~~~
+
+  The symbol "React" was originally declared here:
+
+    src/pages/Dashboard.js:2:7:
+      2 │ import React, { useState, useEffect } from 'react';
+        ╵        ~~~~~
+
+
+✘ [ERROR] The symbol "useState" has already been declared
+
+    src/pages/Dashboard.js:367:16:
+      367 │ import React, { useState } from 'react';
+          ╵                 ~~~~~~~~
+
+  The symbol "useState" was originally declared here:
+
+    src/pages/Dashboard.js:2:16:
+      2 │ import React, { useState, useEffect } from 'react';
+        ╵                 ~~~~~~~~
+
+
+✘ [ERROR] The symbol "Container" has already been declared
+
+    src/pages/Dashboard.js:368:9:
+      368 │ import { Container, Row, Col } from 'react-bootstrap';
+          ╵          ~~~~~~~~~
+
+  The symbol "Container" was originally declared here:
+
+    src/pages/Dashboard.js:5:2:
+      5 │   Container, Row, Col, Card, Table, Form, 
+        ╵   ~~~~~~~~~
+
+
+✘ [ERROR] The symbol "Row" has already been declared
+
+    src/pages/Dashboard.js:368:20:
+      368 │ import { Container, Row, Col } from 'react-bootstrap';
+          ╵                     ~~~
+
+  The symbol "Row" was originally declared here:
+
+    src/pages/Dashboard.js:5:13:
+      5 │   Container, Row, Col, Card, Table, Form, 
+        ╵              ~~~
+
+
+✘ [ERROR] The symbol "Col" has already been declared
+
+    src/pages/Dashboard.js:368:25:
+      368 │ import { Container, Row, Col } from 'react-bootstrap';
+          ╵                          ~~~
+
+  The symbol "Col" was originally declared here:
+
+    src/pages/Dashboard.js:5:18:
+      5 │   Container, Row, Col, Card, Table, Form, 
+        ╵                   ~~~
+
+
+✘ [ERROR] The symbol "useSkylanderContext" has already been declared
+
+    src/pages/Dashboard.js:369:9:
+      369 │ import { useSkylanderContext } from '../context/SkylanderContext';
+          ╵          ~~~~~~~~~~~~~~~~~~~
+
+  The symbol "useSkylanderContext" was originally declared here:
+
+    src/pages/Dashboard.js:9:9:
+      9 │ import { useSkylanderContext } from '../context/SkylanderContext';
+        ╵          ~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] The symbol "Dashboard" has already been declared
+
+    src/pages/Dashboard.js:371:9:
+      371 │ function Dashboard() {
+          ╵          ~~~~~~~~~
+
+  The symbol "Dashboard" was originally declared here:
+
+    src/pages/Dashboard.js:11:9:
+      11 │ function Dashboard() {
+         ╵          ~~~~~~~~~
+
+  Duplicate top-level function declarations are not allowed in an ECMAScript module. This file is considered to be an ECMAScript module because of the "export" keyword here:
+
+    src/pages/Dashboard.js:386:0:
+      386 │ export default Dashboard;
+          ╵ ~~~~~~
+
+
+✘ [ERROR] Multiple exports with the same name "default"
+
+    src/pages/Dashboard.js:386:7:
+      386 │ export default Dashboard;
+          ╵        ~~~~~~~
+
+  The name "default" was originally exported here:
+
+    src/pages/Dashboard.js:366:7:
+      366 │ export default Dashboard;
