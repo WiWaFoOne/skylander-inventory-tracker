@@ -292,5 +292,4 @@ function getElementColor(element) {
   
   return colors[element] || 'secondary';
 }
-
 export default TradeView;
