@@ -6,3 +6,11 @@ channel = "stable-24_05"
 
 [deployment]
 run = ["sh", "-c", "npm run dev"]
+
+[[deployment.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[languages.javascript]
+pattern = "**/*.{js,jsx}"
+syntax = "jsx"
