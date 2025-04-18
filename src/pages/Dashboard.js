@@ -364,3 +364,23 @@ function getElementColor(element) {
 }
 
 export default Dashboard;
+import React, { useState } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import { useSkylanderContext } from '../context/SkylanderContext';
+
+function Dashboard() {
+  const { skylanders, userInventory } = useSkylanderContext();
+  
+  return (
+    <Container>
+      <h2 className="mb-4">Dashboard</h2>
+      <Row>
+        <Col>
+          <p>Welcome to your Skylander Inventory Dashboard</p>
+        </Col>
+      </Row>
+    </Container>
+  );
+}
+
+export default Dashboard;
