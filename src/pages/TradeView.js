@@ -294,3 +294,5 @@ function getElementColor(element) {
 }
 
 export default TradeView;
+
+
