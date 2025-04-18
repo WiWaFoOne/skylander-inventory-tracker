@@ -1,5 +1,4 @@
 // App.js - Main component with routing
-import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import Dashboard from './pages/Dashboard';
