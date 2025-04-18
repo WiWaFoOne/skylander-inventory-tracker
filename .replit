@@ -1,8 +1,22 @@
 modules = ["nodejs-20", "web"]
 run = "npm run dev"
 
+[env]
+PORT = "3000"
+
 [nix]
 channel = "stable-24_05"
+
+[packager]
+language = "nodejs"
+
+[packager.features]
+packageSearch = true
+guessImports = true
+enabledForHosting = false
+
+[unitTest]
+language = "nodejs"
 
 [deployment]
 deploymentTarget = "static"
@@ -16,3 +30,9 @@ to = "/index.html"
 [languages.javascript]
 pattern = "**/*.{js,jsx}"
 syntax = "jsx"
+
+[languages.javascript.languageServer]
+start = "typescript-language-server --stdio"
+
+[server]
+port = 3000
