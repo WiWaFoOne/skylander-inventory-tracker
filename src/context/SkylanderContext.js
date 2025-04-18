@@ -136,7 +136,7 @@ export function SkylanderProvider({ children }) {
   // Return the provider with the value
   return (
     <SkylanderContext.Provider value={value}>
-      {children}
-    </SkylanderContext.Provider>
+    {children}
+</SkylanderContext.Provider>
   );
 }
