@@ -1,0 +1,206 @@
+/* index.css - Main stylesheet for the application */
+:root {
+  --primary-color: #5c2d91; /* Purple, similar to Skylanders portal color */
+  --secondary-color: #f89c1c; /* Orange, for highlights */
+  --background-color: #f5f5f5;
+  --card-background: #ffffff;
+  --text-color: #333333;
+  --border-color: #e0e0e0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Navbar customization */
+.navbar-dark {
+  background-color: var(--primary-color) !important;
+}
+
+/* Card styling */
+.card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.card-header {
+  background-color: rgba(92, 45, 145, 0.05);
+  border-bottom: 1px solid var(--border-color);
+  font-weight: 600;
+}
+
+/* Table styling */
+.table thead th {
+  background-color: rgba(92, 45, 145, 0.05);
+  border-bottom: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(92, 45, 145, 0.03);
+}
+
+/* Button customization */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #4a2275;
+  border-color: #4a2275;
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Form control focus */
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(92, 45, 145, 0.25);
+}
+
+/* Badge customizations */
+.badge.bg-purple {
+  background-color: #9c27b0 !important;
+}
+
+/* Custom styling for inventory stats cards */
+.stat-card {
+  transition: transform 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Webcam container styling */
+.webcam-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.webcam-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  z-index: 10;
+}
+
+/* Element badge styling */
+.element-badge {
+  font-size: 0.85rem;
+  padding: 0.35rem 0.65rem;
+}
+
+/* App custom responsive modifications */
+@media (max-width: 768px) {
+  .card-header {
+    padding: 0.75rem;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+  
+  .table td, .table th {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* App.css - Additional styling specific to components */
+.skylander-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.skylander-app .container {
+  flex: 1;
+  padding-bottom: 2rem;
+}
+
+/* Custom styling for the Dashboard element cards */
+.element-card {
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.element-card:hover {
+  transform: translateY(-5px);
+}
+
+.element-card.air { background: linear-gradient(135deg, #57c1eb 0%, #246fa8 100%); }
+.element-card.earth { background: linear-gradient(135deg, #9c6644 0%, #5d4037 100%); }
+.element-card.fire { background: linear-gradient(135deg, #ff7043 0%, #e64a19 100%); }
+.element-card.life { background: linear-gradient(135deg, #8bc34a 0%, #558b2f 100%); }
+.element-card.magic { background: linear-gradient(135deg, #ab47bc 0%, #6a1b9a 100%); }
+.element-card.tech { background: linear-gradient(135deg, #ffa726 0%, #ef6c00 100%); }
+.element-card.undead { background: linear-gradient(135deg, #78909c 0%, #37474f 100%); }
+.element-card.water { background: linear-gradient(135deg, #29b6f6 0%, #0277bd 100%); }
+.element-card.light { background: linear-gradient(135deg, #ffee58 0%, #f9a825 100%); }
+.element-card.dark { background: linear-gradient(135deg, #5d4037 0%, #212121 100%); }
+
+/* Skylander Detail page styling */
+.skylander-detail-image {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 1rem;
+}
+
+/* Targeting Overlay for camera scanning */
+.targeting-overlay {
+  pointer-events: none;
+}
+
+/* Add animation to spinner */
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(92, 45, 145, 0.7);
+  }
+  
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(92, 45, 145, 0);
+  }
+  
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(92, 45, 145, 0);
+  }
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
